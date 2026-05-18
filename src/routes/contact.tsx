@@ -33,7 +33,7 @@ function CalEmbed() {
   return (
     <Cal
       namespace="consultation"
-      calLink="YOUR_CAL_USERNAME/consultation"  // ← replace this
+      calLink="calLink="drjogani/orthopedic-consultation""  // ← replace this
       style={{ width: "100%", minHeight: "600px", overflow: "scroll" }}
       config={{ layout: "month_view" }}
     />
