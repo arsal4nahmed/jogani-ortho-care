@@ -1,9 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Clock, BookOpen, Phone } from "lucide-react";
-import { getArticleBySlug, regions } from "@/lib/blog-data";
+import { getArticleBySlug, regions, type Article, type Region } from "@/lib/blog-data";
 
 export const Route = createFileRoute("/blog/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): { article: Article; region: Region } => {
     const result = getArticleBySlug(params.slug);
     if (!result) throw notFound();
     return result;
