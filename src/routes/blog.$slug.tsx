@@ -41,7 +41,7 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function ArticlePage() {
-  const { article, region } = Route.useLoaderData();
+  const { article, region } = Route.useLoaderData() as { article: Article; region: Region };
 
   // Related: other articles in the same region
   const related = region.articles.filter((a) => a.slug !== article.slug);
