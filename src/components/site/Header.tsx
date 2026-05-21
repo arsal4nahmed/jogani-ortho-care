@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logoHorizontal from "@/assets/logo-horizontal.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -16,14 +17,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
-        <Link to="/" className="group flex items-center gap-2.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-hero text-primary-foreground shadow-soft">
-            <span className="font-serif text-lg font-bold">AJ</span>
-          </div>
-          <div className="leading-tight">
-            <div className="font-serif text-base font-semibold text-primary">Dr. Abhinav Jogani</div>
-            <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Orthopedic Surgeon</div>
-          </div>
+        <Link to="/" className="group flex items-center" aria-label="Dr. Jogani's Bone and Joint Care Center">
+          <img
+            src={logoHorizontal}
+            alt="Dr. Jogani's Bone and Joint Care Center"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
