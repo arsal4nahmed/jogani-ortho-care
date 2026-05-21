@@ -21,7 +21,7 @@ export function Header() {
           <img
             src={logoHorizontal}
             alt="Dr. Jogani's Bone and Joint Care Center"
-            className="h-12 w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
         </Link>
 
