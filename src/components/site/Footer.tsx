@@ -1,13 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Linkedin, MapPin, Phone, Clock } from "lucide-react";
+import logoStacked from "@/assets/logo-stacked.png";
 
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4 md:px-6">
         <div className="md:col-span-2">
-          <div className="font-serif text-2xl font-semibold">Dr. Abhinav Jogani</div>
-          <p className="mt-1 text-sm text-primary-foreground/70">MS Orthopedics (KEM Mumbai) · DNB</p>
+          <div className="inline-block rounded-xl bg-white p-3">
+            <img
+              src={logoStacked}
+              alt="Dr. Jogani's Bone and Joint Care Center"
+              className="h-[100px] w-auto object-contain"
+            />
+          </div>
+          <p className="mt-4 text-sm text-primary-foreground/70">MS Orthopedics (KEM Mumbai) · DNB</p>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/80">
             Orthopedic & Joint Replacement Surgeon based in Nagpur. Patient-first care
             backed by 15+ years of clinical and academic excellence.
